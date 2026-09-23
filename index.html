@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>国标麻将算番</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="top">
+      <div>
+        <p class="eyebrow">Mahjong Competition Rules</p>
+        <h1>国标麻将算番</h1>
+        <p class="lede">按中国大众麻将录入：只填手牌里的面子和对子，不设合张、不设副露。番种仍按国标 81 种计算。</p>
+      </div>
+      <div class="total-card" id="totalCard">
+        <span>合计</span>
+        <strong id="totalFan">0</strong>
+        <small id="limitLabel">未起和</small>
+      </div>
+    </header>
+
+    <main>
+      <section class="panel">
+        <div class="panel-head">
+          <h2>牌型</h2>
+          <div class="actions">
+            <button type="button" id="sampleBtn">示例：平和花牌</button>
+            <button type="button" id="clearBtn" class="ghost">清空</button>
+          </div>
+        </div>
+        <p class="hint">先点选牌，再加入手牌。可以一次选多张，能组成的顺子、刻子、杠子和对子会一起加入。不需要合张，也不需要副露。标准牌 136 张，花牌另计 0–8。和牌须为 4 面子 + 1 对，或七对、十三幺、全不靠等特殊牌型。</p>
+        <div id="palette" class="palette"></div>
+        <div>
+          <h3>手牌 <button type="button" id="addConcealed" class="tiny">加入选中牌</button></h3>
+          <ul id="concealedList" class="meld-list"></ul>
+        </div>
+        <label class="special-row">
+          特殊牌型
+          <select id="specialShape">
+            <option value="auto">自动（4 面子 + 1 对）</option>
+            <option value="seven-pairs">七对</option>
+            <option value="thirteen-orphans">十三幺</option>
+            <option value="knitted-honors">全不靠 / 七星不靠</option>
+            <option value="knitted-straight">组合龙</option>
+          </select>
+        </label>
+        <div>
+          <h3>特殊散牌 <button type="button" id="addLoose" class="tiny">加入选中牌</button></h3>
+          <div id="looseBox" class="pair-box">十三幺、全不靠、组合龙时使用</div>
+        </div>
+      </section>
+
+      <section class="panel">
+        <h2>和牌条件</h2>
+        <div class="form-grid">
+          <label>花牌张数
+            <input id="flowers" type="number" min="0" max="8" value="0" />
+          </label>
+          <label>和牌方式
+            <select id="winType">
+              <option value="discard">点和</option>
+              <option value="self">自摸</option>
+            </select>
+          </label>
+          <label>座位风
+            <select id="seatWind">
+              <option value="east">东</option>
+              <option value="south">南</option>
+              <option value="west">西</option>
+              <option value="north">北</option>
+            </select>
+          </label>
+          <label>圈风
+            <select id="roundWind">
+              <option value="east">东</option>
+              <option value="south">南</option>
+              <option value="west">西</option>
+              <option value="north">北</option>
+            </select>
+          </label>
+          <label class="check"><input id="lastTile" type="checkbox" /> 海底 / 河底</label>
+          <label class="check"><input id="kongDraw" type="checkbox" /> 杠上开花 / 抢杠</label>
+          <label class="check"><input id="singleWait" type="checkbox" /> 单钓将</label>
+          <label class="check"><input id="edgeWait" type="checkbox" /> 边张</label>
+          <label class="check"><input id="closedWait" type="checkbox" /> 坎张</label>
+          <label class="check"><input id="lastOfKind" type="checkbox" /> 和绝张</label>
+        </div>
+        <button type="button" id="calcBtn" class="primary">计算番数</button>
+        <p id="error" class="error" hidden></p>
+      </section>
+
+      <section class="panel">
+        <h2>计分明细</h2>
+        <table>
+          <thead>
+            <tr><th>番种</th><th>番</th><th>说明</th></tr>
+          </thead>
+          <tbody id="resultBody">
+            <tr><td colspan="3" class="empty">尚未计算</td></tr>
+          </tbody>
+        </table>
+        <h3>已识别但不计</h3>
+        <ul id="excluded" class="excluded"></ul>
+      </section>
+    </main>
+    <script type="module" src="src/main.js?v=14"></script>
+  </body>
+</html>
