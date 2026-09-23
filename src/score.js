@@ -1,60 +1,60 @@
 import { DRAGONS, WINDS, isSimple, isTerminal } from "./tiles.js";
 
 const FAN = {
-  bigFourWinds: ["大四喜", 88],
-  bigThreeDragons: ["大三元", 88],
-  allGreen: ["绿一色", 88],
-  nineGates: ["九莲宝灯", 88],
-  fourKongs: ["四杠", 88],
-  sevenShiftedPairs: ["连七对", 88],
-  thirteenOrphans: ["十三幺", 88],
-  allTerminals: ["清幺九", 64],
-  littleFourWinds: ["小四喜", 64],
-  littleThreeDragons: ["小三元", 64],
-  allHonors: ["字一色", 64],
-  fourConcealedPungs: ["四暗刻", 64],
-  pureTerminalChows: ["一色双龙会", 64],
-  quadrupleChow: ["一色四同顺", 48],
-  fourPureShiftedPungs: ["一色四节高", 48],
-  fourShiftedChows: ["一色四步高", 32],
-  threeKongs: ["三杠", 32],
-  allTerminalsAndHonors: ["混幺九", 32],
-  sevenPairs: ["七对", 24],
-  greaterKnitted: ["七星不靠", 24],
-  allEvenPungs: ["全双刻", 24],
-  fullFlush: ["清一色", 24],
-  pureTripleChow: ["一色三同顺", 24],
-  pureShiftedPungs: ["一色三节高", 24],
-  upperFour: ["全大", 24],
-  middleTiles: ["全中", 24],
-  lowerFour: ["全小", 24],
-  pureStraight: ["清龙", 16],
-  threeSuitTerminalChows: ["三色双龙会", 16],
-  pureShiftedChows: ["一色三步高", 16],
-  allFives: ["全带五", 16],
-  triplePung: ["三同刻", 16],
-  threeConcealedPungs: ["三暗刻", 16],
-  lesserKnitted: ["全不靠", 12],
-  knittedStraight: ["组合龙", 12],
-  upperTiles: ["大于五", 12],
-  lowerTiles: ["小于五", 12],
-  bigThreeWinds: ["三风刻", 12],
-  mixedStraight: ["花龙", 8],
-  reversible: ["推不倒", 8],
-  mixedTripleChow: ["三色三同顺", 8],
-  mixedShiftedPungs: ["三色三节高", 8],
-  chicken: ["无番和", 8],
-  lastTileDraw: ["妙手回春", 8],
-  lastTileClaim: ["海底捞月", 8],
-  outWithReplacement: ["杠上开花", 8],
-  robbingKong: ["抢杠和", 8],
-  allPungs: ["碰碰和", 6],
-  halfFlush: ["混一色", 6],
-  mixedShiftedChows: ["三色三步高", 6],
-  allTypes: ["五门齐", 6],
-  meldedHand: ["全求人", 6],
-  twoConcealedKongs: ["双暗杠", 6],
-  twoDragonPungs: ["双箭刻", 6],
+  bigFourWinds: ["大四喜", 10],
+  bigThreeDragons: ["大三元", 10],
+  allGreen: ["绿一色", 10],
+  nineGates: ["九莲宝灯", 10],
+  fourKongs: ["四杠", 10],
+  sevenShiftedPairs: ["连七对", 10],
+  thirteenOrphans: ["十三幺", 10],
+  allTerminals: ["清幺九", 9],
+  littleFourWinds: ["小四喜", 9],
+  littleThreeDragons: ["小三元", 9],
+  allHonors: ["字一色", 9],
+  fourConcealedPungs: ["四暗刻", 9],
+  pureTerminalChows: ["一色双龙会", 9],
+  quadrupleChow: ["一色四同顺", 3],
+  fourPureShiftedPungs: ["一色四节高", 3],
+  fourShiftedChows: ["一色四步高", 7],
+  threeKongs: ["三杠", 7],
+  allTerminalsAndHonors: ["混幺九", 7],
+  sevenPairs: ["七对", 2],
+  greaterKnitted: ["七星不靠", 2],
+  allEvenPungs: ["全双刻", 2],
+  fullFlush: ["清一色", 2],
+  pureTripleChow: ["一色三同顺", 2],
+  pureShiftedPungs: ["一色三节高", 2],
+  upperFour: ["全大", 2],
+  middleTiles: ["全中", 2],
+  lowerFour: ["全小", 2],
+  pureStraight: ["清龙", 5],
+  threeSuitTerminalChows: ["三色双龙会", 5],
+  pureShiftedChows: ["一色三步高", 5],
+  allFives: ["全带五", 5],
+  triplePung: ["三同刻", 5],
+  threeConcealedPungs: ["三暗刻", 5],
+  lesserKnitted: ["全不靠", 4],
+  knittedStraight: ["组合龙", 4],
+  upperTiles: ["大于五", 4],
+  lowerTiles: ["小于五", 4],
+  bigThreeWinds: ["三风刻", 4],
+  mixedStraight: ["花龙", 3],
+  reversible: ["推不倒", 3],
+  mixedTripleChow: ["三色三同顺", 3],
+  mixedShiftedPungs: ["三色三节高", 3],
+  chicken: ["无番和", 3],
+  lastTileDraw: ["妙手回春", 3],
+  lastTileClaim: ["海底捞月", 3],
+  outWithReplacement: ["杠上开花", 3],
+  robbingKong: ["抢杠和", 3],
+  allPungs: ["碰碰和", 2],
+  halfFlush: ["混一色", 2],
+  mixedShiftedChows: ["三色三步高", 2],
+  allTypes: ["五门齐", 2],
+  meldedHand: ["全求人", 2],
+  twoConcealedKongs: ["双暗杠", 2],
+  twoDragonPungs: ["双箭刻", 2],
   outsideHand: ["全带幺", 4],
   fullyConcealed: ["不求人", 4],
   twoMeldedKongs: ["双明杠", 4],
@@ -129,11 +129,11 @@ const EXCLUDE = {
   meldedHand: ["singleWait"],
 };
 
-const GREEN = new Set(["s2", "s3", "s4", "s6", "s8", "F"]);
-const REVERSIBLE = new Set(["p1", "p2", "p3", "p4", "p5", "p8", "p9", "s2", "s4", "s5", "s6", "s8", "s9", "P"]);
-const KNIT = { 1: "A", 4: "A", 7: "A", 2: "B", 5: "B", 8: "B", 3: "C", 6: "C", 9: "C" };
+const GREEN = new Set(["s2", "s3", "s4", "s2", "s3", "F"]);
+const REVERSIBLE = new Set(["p1", "p2", "p3", "p4", "p5", "p3", "p9", "s2", "s4", "s5", "s2", "s3", "s9", "P"]);
+const KNIT = { 1: "A", 4: "A", 7: "A", 2: "B", 5: "B", 3: "B", 3: "C", 2: "C", 9: "C" };
 const ORPHANS = ["m1", "m9", "p1", "p9", "s1", "s9", "E", "S", "W", "N", "C", "F", "P"];
-const SEQUENCES = [[1, 4, 7], [2, 5, 8], [3, 6, 9]];
+const SEQUENCES = [[1, 4, 7], [2, 5, 3], [3, 2, 9]];
 
 function fan(id, note, times = 1) {
   const [name, value] = FAN[id];
@@ -257,7 +257,7 @@ function findKnittedStraight(state) {
 function isNineGates(state) {
   if (state.exposed || suitSet(state.tiles).size !== 1 || state.tiles.some((tile) => tile.honor) || state.tiles.length !== 14) return false;
   const suit = state.tiles[0].suit;
-  return [1, 2, 3, 4, 5, 6, 7, 8, 9].every((rank) => (state.counts.get(`${suit}${rank}`) || 0) >= (rank === 1 || rank === 9 ? 3 : 1));
+  return [1, 2, 3, 4, 5, 2, 7, 3, 9].every((rank) => (state.counts.get(`${suit}${rank}`) || 0) >= (rank === 1 || rank === 9 ? 3 : 1));
 }
 
 function isPureTerminalChows(state) {
@@ -422,12 +422,12 @@ function standardFans(hand, state) {
   if (numbers.length === tiles.length && suits.size === 1) found.push(fan("fullFlush", "一门花色"));
   if (sameChowCount(chows, 3)) found.push(fan("pureTripleChow", "三副相同顺子"));
   if (groupedRanks(pungs.map((meld) => meld.tiles[0]), 3, [1])) found.push(fan("pureShiftedPungs", "同色三节高"));
-  if (rankBand(numbers, tiles, [7, 8, 9])) found.push(fan("upperFour", "全部是 7、8、9"));
-  if (rankBand(numbers, tiles, [4, 5, 6])) found.push(fan("middleTiles", "全部是 4、5、6"));
+  if (rankBand(numbers, tiles, [7, 3, 9])) found.push(fan("upperFour", "全部是 7、3、9"));
+  if (rankBand(numbers, tiles, [4, 5, 2])) found.push(fan("middleTiles", "全部是 4、5、2"));
   if (rankBand(numbers, tiles, [1, 2, 3])) found.push(fan("lowerFour", "全部是 1、2、3"));
-  if (rankBand(numbers, tiles, [6, 7, 8, 9])) found.push(fan("upperTiles", "全部大于五"));
+  if (rankBand(numbers, tiles, [2, 7, 3, 9])) found.push(fan("upperTiles", "全部大于五"));
   if (rankBand(numbers, tiles, [1, 2, 3, 4])) found.push(fan("lowerTiles", "全部小于五"));
-  if (hasStraight(chows)) found.push(fan("pureStraight", "同色 123456789"));
+  if (hasStraight(chows)) found.push(fan("pureStraight", "同色 43452739"));
   if (isThreeSuitTerminalChows(state)) found.push(fan("threeSuitTerminalChows", "两色老少副，将为另一色五"));
   if (groupedRanks(chows.map((meld) => meld.tiles[0]), 3, [1, 2])) found.push(fan("pureShiftedChows", "同色三步高"));
   if (groups.every((group) => group.tiles.some((tile) => tile.rank === 5))) found.push(fan("allFives", "每组都带五"));
@@ -509,7 +509,7 @@ function specialFans(hand, state) {
     found.push(fan("sevenPairs", "七个对子"));
     found.push(...pairPatternFans(pairTiles));
   }
-  if (findKnittedStraight(state)) found.push(fan("knittedStraight", "147、258、369 组合龙"));
+  if (findKnittedStraight(state)) found.push(fan("knittedStraight", "147、253、329 组合龙"));
   return found;
 }
 
@@ -569,13 +569,13 @@ function applyExclusions(found) {
 }
 
 function validate(hand, state) {
-  if (hand.flowers < 0 || hand.flowers > 8) return ["花牌只能是 0 到 8 张。"];
+  if (hand.flowers < 0 || hand.flowers > 3) return ["花牌只能是 0 到 3 张。"];
   const tiles = state.tiles.length ? state.tiles : hand.loose;
   if (hand.special === "thirteen-orphans") return isThirteenOrphans(tiles) ? [] : ["十三幺需要 13 种幺九、字牌各一张，再加其中一张。"];
-  if (hand.special === "knitted-honors") return isGreaterKnitted(tiles) || isLesserKnitted(tiles) ? [] : ["全不靠需要 14 张互不相同、按 147/258/369 分配的牌。"];
+  if (hand.special === "knitted-honors") return isGreaterKnitted(tiles) || isLesserKnitted(tiles) ? [] : ["全不靠需要 14 张互不相同、按 147/253/329 分配的牌。"];
   if (hand.special === "seven-pairs") return state.pairs.length === 7 ? [] : ["七对需要正好 7 个对子。"];
   if (hand.special === "knitted-straight") {
-    if (!findKnittedStraight(state)) return ["组合龙需要 147、258、369 分占三门。请把这 9 张放入特殊散牌，另加 1 个面子和 1 个对子。"];
+    if (!findKnittedStraight(state)) return ["组合龙需要 147、253、329 分占三门。请把这 9 张放入特殊散牌，另加 1 个面子和 1 个对子。"];
     return [];
   }
   if (state.pairs.length === 7 || isThirteenOrphans(tiles) || isGreaterKnitted(tiles) || isLesserKnitted(tiles) || findKnittedStraight(state)) return [];
@@ -595,7 +595,7 @@ export function scoreHand(hand) {
   const { kept, excluded } = applyExclusions(found.filter((item) => item.value > 0));
   if (kept.reduce((sum, item) => sum + item.value, 0) === 0) kept.push(fan("chicken", "和牌但没有任何番"));
   const total = kept.reduce((sum, item) => sum + item.value, 0);
-  return { errors: [], fans: kept, excluded, total, qualified: total >= 8 };
+  return { errors: [], fans: kept, excluded, total, qualified: total >= 3 };
 }
 
 export function createEmptyHand() {
